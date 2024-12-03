@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -7,6 +8,7 @@
   <title>Gerenciamento Acadêmico</title>
   <!-- Incluindo Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 
 <body>
@@ -46,12 +48,25 @@
         <li class="nav-item">
           <a class="nav-link text-dark" href="frequencia">Frequencias</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="matriculas">Matriculas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="ocorrencias">Ocorrencias</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="areasdosaber">Áreas do Saber</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="instituicoes">Instituições</a>
+        </li>
 
       </ul>
     </div>
   </nav>
 
   <h1>Bem-vindo ao Sistema de Gerenciamento Acadêmico</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, obcaecati quis unde soluta, similique ducimus ut doloribus iure exercitationem ad provident dolores voluptas fuga nostrum magnam quidem neque. Reprehenderit, ad.</p>
 
 
   <!-- Incluindo jQuery e Bootstrap JS -->

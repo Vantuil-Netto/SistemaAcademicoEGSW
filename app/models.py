@@ -80,6 +80,7 @@ class Curso(models.Model):
 class Disciplina(models.Model):
     nome = models.CharField(max_length=100)
     area_saber = models.ForeignKey(AreaDoSaber, on_delete=models.SET_NULL, null=True, blank=True)
+    curso = models.ForeignKey(Curso, on_delete = models.CASCADE, null = True, blank = True)
 
     def __str__(self):
         return self.nome
@@ -103,6 +104,7 @@ class Turma(models.Model):
 
 # Gerenciar matrículas
 class Matricula(models.Model):
+    turma = models.ForeignKey(Turma, on_delete = models.CASCADE, null = True, blank = True)
     instituicao = models.ForeignKey(InstituicaoEnsino, on_delete=models.CASCADE)
     curso = models.ForeignKey(Curso, on_delete=models.CASCADE)
     estudante = models.ForeignKey(Estudante, on_delete=models.CASCADE)
